@@ -39,3 +39,62 @@ CREATE TABLE STATE_PROVINCE (
     ROWGUID RAW(16),
     MODIFIED_DATE DATE
 );
+
+CREATE TABLE EMPLOYEE_PAY_HISTORY (
+    BusinessEntityID NUMBER PRIMARY KEY,
+    RateChangeDate	 DATE,
+    Rate NUMBER,
+    PayFrequency NUMBER,
+    ModifiedDate DATE
+);
+
+CREATE TABLE PERSON(
+  BusinessEntityID NUMBER PRIMARY KEY,
+  PersonType VARCHAR2(2),
+  NameStyle NUMBER,
+  Title VARCHAR2(10),
+  FirstName VARCHAR2(50),
+  MiddleName VARCHAR2(25),
+  LastName VARCHAR2(50),
+  Suffix VARCHAR2(10),
+  EmailPromotion NUMBER,
+  AdditionalContactInfo VARCHAR2(200),
+  Demographics VARCHAR2(200),
+  Rowguid VARCHAR(36),
+  ModifiedDate DATE
+);
+
+CREATE TABLE PERSON_PHONE(
+    BusinessEntityID NUMBER PRIMARY KEY,
+    PhoneNumber VARCHAR2(25),
+    PhoneNumberTypeID NUMBER,
+    ModifiedDate DATE
+);
+
+CREATE TABLE PRODUCT(
+    ProductID NUMBER,
+    Name VARCHAR2(260),
+    ProductNumber VARCHAR2(50),
+    MakeFlag NUMBER,
+    FinishedGoodsFlag NUMBER,
+    Color VARCHAR2(50),
+    SafetyStockLevel NUMBER,
+    ReorderPoint NUMBER,
+    StandardCost NUMBER,
+    ListPrice NUMBER,
+    Size_ VARCHAR2(50),
+    SizeUnitMeasureCode VARCHAR2(10),
+    WeightUnitMeasureCode VARCHAR2(10),
+    Weight NUMBER,
+    DaysToManufacture NUMBER,
+    ProductLine VARCHAR2(10),
+    Class VARCHAR2(10),
+    Style VARCHAR2(10),
+    ProductSubcategoryID NUMBER,
+    ProductModelID NUMBER,
+    SellStartDate DATE,
+    SellEndDate DATE,
+    DiscontinuedDate DATE,
+    Rowguid  VARCHAR2(16),
+    ModifiedDate DATE
+);
