@@ -430,11 +430,66 @@
     <created_date>2023/10/07 07:37:37.208</created_date>
     <modified_user>-</modified_user>
     <modified_date>2023/10/07 07:37:37.208</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
+  <connection>
+    <name>ORACLE</name>
+    <server>localhost</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>orcl</database>
+    <port>1521</port>
+    <username>SYSTEM</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1521</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STRICT_NUMBER_38_INTERPRETATION</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <order>
     <hop>
       <from>PERSON</from>
@@ -688,7 +743,7 @@
       <select_unspecified>N</select_unspecified>
       <meta>
         <name>BusinessEntityID</name>
-        <rename>BusinessEntityID</rename>
+        <rename>BUSINESS_ENTITY_ID</rename>
         <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -705,7 +760,7 @@
       </meta>
       <meta>
         <name>PersonType</name>
-        <rename>PersonType</rename>
+        <rename>PERSON_TYPE</rename>
         <type>String</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -722,7 +777,7 @@
       </meta>
       <meta>
         <name>NameStyle</name>
-        <rename>NameStyle</rename>
+        <rename>NAME_STYLE</rename>
         <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -739,7 +794,7 @@
       </meta>
       <meta>
         <name>Title</name>
-        <rename>Title</rename>
+        <rename>TITLE</rename>
         <type>String</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -756,7 +811,7 @@
       </meta>
       <meta>
         <name>FirstName</name>
-        <rename>FirstName</rename>
+        <rename>FIRST_NAME</rename>
         <type>String</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -773,7 +828,7 @@
       </meta>
       <meta>
         <name>MiddleName</name>
-        <rename>MiddleName</rename>
+        <rename>MIDDLE_NAME</rename>
         <type>String</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -790,7 +845,7 @@
       </meta>
       <meta>
         <name>LastName</name>
-        <rename>LastName</rename>
+        <rename>LAST_NAME</rename>
         <type>String</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -807,7 +862,7 @@
       </meta>
       <meta>
         <name>Suffix</name>
-        <rename>Suffix</rename>
+        <rename>SUFFIX</rename>
         <type>String</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -824,7 +879,7 @@
       </meta>
       <meta>
         <name>EmailPromotion</name>
-        <rename>EmailPromotion</rename>
+        <rename>EMAIL_PROMOTION</rename>
         <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -841,7 +896,7 @@
       </meta>
       <meta>
         <name>AdditionalContactInfo</name>
-        <rename>AdditionalContactInfo</rename>
+        <rename>ADDITIONAL_CONTACT_INFO</rename>
         <type>String</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -858,7 +913,7 @@
       </meta>
       <meta>
         <name>Demographics</name>
-        <rename>Demographics</rename>
+        <rename>DEMOGRAPHICS</rename>
         <type>String</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -875,7 +930,7 @@
       </meta>
       <meta>
         <name>rowguid</name>
-        <rename>Rowguid</rename>
+        <rename>ROWGUID</rename>
         <type>String</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -892,7 +947,7 @@
       </meta>
       <meta>
         <name>ModifiedDate</name>
-        <rename>ModifiedDate</rename>
+        <rename>MODIFIED_DATE</rename>
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -918,6 +973,70 @@
     </remotesteps>
     <GUI>
       <xloc>560</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>ORACLE</connection>
+    <schema>C##DOS</schema>
+    <table>PERSON</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>BUSINESS_ENTITY_ID</column_name>
+        <stream_name>BusinessEntityID</stream_name>
+      </field>
+      <field>
+        <column_name>EMAIL_ADDRESS_ID</column_name>
+        <stream_name>EmailAddressID</stream_name>
+      </field>
+      <field>
+        <column_name>EMAIL_ADDRESS</column_name>
+        <stream_name>EmailAddress</stream_name>
+      </field>
+      <field>
+        <column_name>ROWGUID</column_name>
+        <stream_name>rowguid</stream_name>
+      </field>
+      <field>
+        <column_name>MODIFIED_DATE</column_name>
+        <stream_name>ModifiedDate</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>

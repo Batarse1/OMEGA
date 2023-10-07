@@ -430,11 +430,66 @@
     <created_date>2023/10/07 07:41:23.790</created_date>
     <modified_user>-</modified_user>
     <modified_date>2023/10/07 07:41:23.790</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
+  <connection>
+    <name>ORACLE</name>
+    <server>localhost</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>orcl</database>
+    <port>1521</port>
+    <username>SYSTEM</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1521</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STRICT_NUMBER_38_INTERPRETATION</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <order>
     <hop>
       <from>PERSON_PHONE</from>
@@ -580,7 +635,7 @@
       <select_unspecified>N</select_unspecified>
       <meta>
         <name>BusinessEntityID</name>
-        <rename>BusinessEntityID</rename>
+        <rename>BUSINESS_ENTITY_ID</rename>
         <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -597,7 +652,7 @@
       </meta>
       <meta>
         <name>PhoneNumber</name>
-        <rename>PhoneNumber</rename>
+        <rename>PHONE_NUMBER</rename>
         <type>String</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -614,7 +669,7 @@
       </meta>
       <meta>
         <name>PhoneNumberTypeID</name>
-        <rename>PhoneNumberTypeID</rename>
+        <rename>PHONE_NUMBER_TYPE_ID</rename>
         <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -631,7 +686,7 @@
       </meta>
       <meta>
         <name>ModifiedDate</name>
-        <rename>ModifiedDate</rename>
+        <rename>MODIFIED_DATE</rename>
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -657,6 +712,70 @@
     </remotesteps>
     <GUI>
       <xloc>496</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>ORACLE</connection>
+    <schema>C##DOS</schema>
+    <table>PERSON_PHONE</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>BUSINESS_ENTITY_ID</column_name>
+        <stream_name>BusinessEntityID</stream_name>
+      </field>
+      <field>
+        <column_name>EMAIL_ADDRESS_ID</column_name>
+        <stream_name>EmailAddressID</stream_name>
+      </field>
+      <field>
+        <column_name>EMAIL_ADDRESS</column_name>
+        <stream_name>EmailAddress</stream_name>
+      </field>
+      <field>
+        <column_name>ROWGUID</column_name>
+        <stream_name>rowguid</stream_name>
+      </field>
+      <field>
+        <column_name>MODIFIED_DATE</column_name>
+        <stream_name>ModifiedDate</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>

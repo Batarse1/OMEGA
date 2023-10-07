@@ -592,7 +592,7 @@
       <select_unspecified>N</select_unspecified>
       <meta>
         <name>BusinessEntityID</name>
-        <rename>BusinessEntityID</rename>
+        <rename>BUSINESS_ENTITY_ID</rename>
         <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -609,7 +609,7 @@
       </meta>
       <meta>
         <name>RateChangeDate</name>
-        <rename>RateChangeDate</rename>
+        <rename>RATE_CHANGE_DATE</rename>
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -626,7 +626,7 @@
       </meta>
       <meta>
         <name>Rate</name>
-        <rename>Rate</rename>
+        <rename>RATE</rename>
         <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -643,7 +643,7 @@
       </meta>
       <meta>
         <name>PayFrequency</name>
-        <rename>PayFrequency</rename>
+        <rename>PAY_FREQUENCY</rename>
         <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -660,7 +660,7 @@
       </meta>
       <meta>
         <name>ModifiedDate</name>
-        <rename>ModifiedDate</rename>
+        <rename>MODIFIED_DATE</rename>
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
