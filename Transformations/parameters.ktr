@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
     <name>parameters</name>
@@ -7,7 +6,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>/</directory>
+    <directory>/Transformations</directory>
     <parameters>
     </parameters>
     <log>
@@ -430,21 +429,21 @@
     <created_user>-</created_user>
     <created_date>2023/10/05 17:32:11.035</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/10/05 17:32:11.035</modified_date>
+    <modified_date>2023/10/08 13:14:07.680</modified_date>
     <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>PARAMETROS_ORACLE_CONNECTION</name>
+    <name>ORACLE_CONNECTION</name>
     <server>localhost</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>orcl</database>
+    <database>xe</database>
     <port>1521</port>
-    <username>PARAMETROS</username>
-    <password>Encrypted 2be98afc86aa78285b918a375ca80a0c9</password>
+    <username>SYSTEM</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10dd9facd9</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -601,6 +600,48 @@
         <target_null_string/>
         <target_aggregation_type>-</target_aggregation_type>
       </field>
+      <field>
+        <field_name>VALOR_PARAM</field_name>
+        <key_value>SCHEMA</key_value>
+        <target_name>SCHEMA</target_name>
+        <target_type>String</target_type>
+        <target_format/>
+        <target_length>100</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>VALOR_PARAM</field_name>
+        <key_value>SCHEMA_DW</key_value>
+        <target_name>SCHEMA_DW</target_name>
+        <target_type>String</target_type>
+        <target_format/>
+        <target_length>100</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
+      <field>
+        <field_name>VALOR_PARAM</field_name>
+        <key_value>DIR_FILE</key_value>
+        <target_name>DIR_FILE</target_name>
+        <target_type>String</target_type>
+        <target_format/>
+        <target_length>100</target_length>
+        <target_precision>-1</target_precision>
+        <target_decimal_symbol/>
+        <target_grouping_symbol/>
+        <target_currency_symbol/>
+        <target_null_string/>
+        <target_aggregation_type>-</target_aggregation_type>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -611,8 +652,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>445</xloc>
-      <yloc>91</yloc>
+      <xloc>528</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -646,6 +687,15 @@
       <field>
         <name>PASSWORD</name>
       </field>
+      <field>
+        <name>SCHEMA</name>
+      </field>
+      <field>
+        <name>SCHEMA_DW</name>
+      </field>
+      <field>
+        <name>DIR_FILE</name>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -657,8 +707,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>589</xloc>
-      <yloc>91</yloc>
+      <xloc>672</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -710,6 +760,24 @@
         <variable_type>ROOT_JOB</variable_type>
         <default_value/>
       </field>
+      <field>
+        <field_name>SCHEMA</field_name>
+        <variable_name>SCHEMA</variable_name>
+        <variable_type>ROOT_JOB</variable_type>
+        <default_value/>
+      </field>
+      <field>
+        <field_name>SCHEMA_DW</field_name>
+        <variable_name>SCHEMA_DW</variable_name>
+        <variable_type>ROOT_JOB</variable_type>
+        <default_value/>
+      </field>
+      <field>
+        <field_name>DIR_FILE</field_name>
+        <variable_name>DIR_FILE</variable_name>
+        <variable_type>ROOT_JOB</variable_type>
+        <default_value/>
+      </field>
     </fields>
     <use_formatting>Y</use_formatting>
     <attributes/>
@@ -721,8 +789,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>717</xloc>
-      <yloc>91</yloc>
+      <xloc>800</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -763,8 +831,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>301</xloc>
-      <yloc>91</yloc>
+      <xloc>384</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -779,7 +847,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>PARAMETROS_ORACLE_CONNECTION</connection>
+    <connection>ORACLE_CONNECTION</connection>
     <sql>SELECT SISTEMA, NOMBRE_PARAM, VALOR_PARAM FROM PARAMETROS.PARAMETROS
 WHERE SISTEMA = 'OMEGA'</sql>
     <limit>0</limit>
@@ -808,8 +876,8 @@ WHERE SISTEMA = 'OMEGA'</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
-        <date_format_timezone>America/Guatemala</date_format_timezone>
+        <date_format_locale>es_SV</date_format_locale>
+        <date_format_timezone>America/El_Salvador</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
@@ -831,8 +899,8 @@ WHERE SISTEMA = 'OMEGA'</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
-        <date_format_timezone>America/Guatemala</date_format_timezone>
+        <date_format_locale>es_SV</date_format_locale>
+        <date_format_timezone>America/El_Salvador</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
@@ -854,8 +922,8 @@ WHERE SISTEMA = 'OMEGA'</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
-        <date_format_timezone>America/Guatemala</date_format_timezone>
+        <date_format_locale>es_SV</date_format_locale>
+        <date_format_timezone>America/El_Salvador</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
     </row-meta>
@@ -868,8 +936,8 @@ WHERE SISTEMA = 'OMEGA'</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>125</xloc>
-      <yloc>91</yloc>
+      <xloc>208</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
