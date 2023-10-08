@@ -602,21 +602,6 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>OK</name>
-      <description/>
-      <type>WRITE_TO_LOG</type>
-      <attributes/>
-      <logmessage>REPLICA_3: CARGA DE DIMENSIONES FINALIZADA CON EXITO</logmessage>
-      <loglevel>Basic</loglevel>
-      <logsubject>FINALIZADO</logsubject>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>848</xloc>
-      <yloc>208</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
       <name>Error</name>
       <description/>
       <type>WRITE_TO_LOG</type>
@@ -645,6 +630,173 @@
       <attributes_kjc/>
     </entry>
     <entry>
+      <name>OK</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <attributes/>
+      <logmessage>CARGA DE DIMENSIONES FINALIZADA CON EXITO</logmessage>
+      <loglevel>Basic</loglevel>
+      <logsubject>FINALIZADO</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1200</xloc>
+      <yloc>496</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Person File</name>
+      <description/>
+      <type>CREATE_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\person_file.txt</filename>
+      <fail_if_file_exists>Y</fail_if_file_exists>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>928</xloc>
+      <yloc>64</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Employee Department History File</name>
+      <description/>
+      <type>CREATE_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\employee_department_history_file.txt</filename>
+      <fail_if_file_exists>Y</fail_if_file_exists>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>928</xloc>
+      <yloc>176</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Person Phone File</name>
+      <description/>
+      <type>CREATE_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\person_phone_file.txt</filename>
+      <fail_if_file_exists>Y</fail_if_file_exists>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>928</xloc>
+      <yloc>272</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Product File</name>
+      <description/>
+      <type>CREATE_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\product_file.txt</filename>
+      <fail_if_file_exists>Y</fail_if_file_exists>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>928</xloc>
+      <yloc>368</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Wait Person</name>
+      <description/>
+      <type>WAIT_FOR_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\person.txt</filename>
+      <maximum_timeout>3600</maximum_timeout>
+      <check_cycle_time>2</check_cycle_time>
+      <success_on_timeout>N</success_on_timeout>
+      <file_size_check>N</file_size_check>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1184</xloc>
+      <yloc>64</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Wait Employee Deparment History</name>
+      <description/>
+      <type>WAIT_FOR_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\file2.txt</filename>
+      <maximum_timeout>3600</maximum_timeout>
+      <check_cycle_time>2</check_cycle_time>
+      <success_on_timeout>N</success_on_timeout>
+      <file_size_check>N</file_size_check>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1184</xloc>
+      <yloc>176</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Wait Person Phone</name>
+      <description/>
+      <type>WAIT_FOR_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\person_phone_file.txt</filename>
+      <maximum_timeout>3600</maximum_timeout>
+      <check_cycle_time>2</check_cycle_time>
+      <success_on_timeout>N</success_on_timeout>
+      <file_size_check>N</file_size_check>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1184</xloc>
+      <yloc>272</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Wait Product</name>
+      <description/>
+      <type>WAIT_FOR_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\product_file.txt</filename>
+      <maximum_timeout>3600</maximum_timeout>
+      <check_cycle_time>2</check_cycle_time>
+      <success_on_timeout>N</success_on_timeout>
+      <file_size_check>N</file_size_check>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1184</xloc>
+      <yloc>368</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Delete files</name>
+      <description/>
+      <type>DELETE_FILES</type>
+      <attributes/>
+      <arg_from_previous>N</arg_from_previous>
+      <include_subfolders>N</include_subfolders>
+      <fields>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>^.*\.txt$</filemask>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>944</xloc>
+      <yloc>496</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
       <name>Success</name>
       <description/>
       <type>SUCCESS</type>
@@ -652,8 +804,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>960</xloc>
-      <yloc>208</yloc>
+      <xloc>1312</xloc>
+      <yloc>496</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -777,7 +929,7 @@
     </hop>
     <hop>
       <from>Person</from>
-      <to>OK</to>
+      <to>Person File</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -786,7 +938,7 @@
     </hop>
     <hop>
       <from>EmployeeDepartmentHistory</from>
-      <to>OK</to>
+      <to>Employee Department History File</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -795,7 +947,7 @@
     </hop>
     <hop>
       <from>PersonPhone</from>
-      <to>OK</to>
+      <to>Person Phone File</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -804,6 +956,60 @@
     </hop>
     <hop>
       <from>Product</from>
+      <to>Product File</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Person File</from>
+      <to>Wait Person</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Employee Department History File</from>
+      <to>Wait Employee Deparment History</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Person Phone File</from>
+      <to>Wait Person Phone</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Product File</from>
+      <to>Wait Product</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Wait Product</from>
+      <to>Delete files</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Delete files</from>
       <to>OK</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
