@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>StateProvince</name>
+    <name>ProductCategory</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,9 +427,9 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2023/10/07 06:11:01.730</created_date>
+    <created_date>2023/10/07 05:57:04.664</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/10/07 06:11:01.730</modified_date>
+    <modified_date>2023/10/07 05:57:04.664</modified_date>
     <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -529,7 +529,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\OMEGA\SOURCES\StateProvince.xlsx</name>
+      <name>C:\OMEGA\SOURCES\ProductCategory.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -537,43 +537,7 @@
     </file>
     <fields>
       <field>
-        <name>StateProvinceID</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>StateProvinceCode</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>CountryRegionCode</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>IsOnlyStateProvinceFlag</name>
+        <name>ProductCategoryID</name>
         <type>Number</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -587,18 +551,6 @@
       <field>
         <name>Name</name>
         <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>TerritoryID</name>
-        <type>Number</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -685,97 +637,14 @@
       <schema_name/>
     </partitioning>
     <fields>
-      <field>
-        <name>StateProvinceID</name>
-        <rename/>
-      </field>
-      <field>
-        <name>StateProvinceCode</name>
-        <rename/>
-      </field>
-      <field>
-        <name>CountryRegionCode</name>
-        <rename/>
-      </field>
-      <field>
-        <name>IsOnlyStateProvinceFlag</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Name</name>
-        <rename/>
-      </field>
-      <field>
-        <name>TerritoryID</name>
-        <rename/>
-      </field>
-      <field>
-        <name>rowguid</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ModifiedDate</name>
-        <rename/>
-      </field>
       <select_unspecified>N</select_unspecified>
       <meta>
-        <name>StateProvinceID</name>
-        <rename>STATE_PROVINCE_ID</rename>
+        <name>ProductCategoryID</name>
+        <rename>PRODUCT_CATEGORY_ID</rename>
         <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask>#</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>StateProvinceCode</name>
-        <rename>STATE_PROVINCE_CODE</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>CountryRegionCode</name>
-        <rename>COUNTRY_REGION_CODE</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>IsOnlyStateProvinceFlag</name>
-        <rename>IS_ONLY_STATE_PROVINCE_FLAG</rename>
-        <type>Number</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -793,23 +662,6 @@
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>TerritoryID</name>
-        <rename>TERRITORY_ID</rename>
-        <type>Number</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>#</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -881,8 +733,8 @@
       <schema_name/>
     </partitioning>
     <connection>ORACLE_CONNECTION</connection>
-    <schema>${USERNAME}</schema>
-    <table>STATE_PROVINCE</table>
+    <schema>${SCHEMA}</schema>
+    <table>PRODUCT_CATEGORY</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>

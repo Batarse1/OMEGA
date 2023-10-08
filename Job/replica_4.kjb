@@ -426,7 +426,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\OMEGA\REPOSITORIO\TRANSFORMATIONS\ProductCategory.ktr</filename>
+      <filename>${DIR_FILE}Transformations\ProductCategory.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -529,7 +529,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\OMEGA\REPOSITORIO\TRANSFORMATIONS\ProductSubcategory.ktr</filename>
+      <filename>${DIR_FILE}Transformations\ProductSubcategory.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -568,7 +568,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\OMEGA\REPOSITORIO\TRANSFORMATIONS\StateProvince.ktr</filename>
+      <filename>${DIR_FILE}Transformations\StateProvince.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -605,7 +605,7 @@
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>C:\OMEGA\REPOSITORIO\product_category_file.txt</filename>
+      <filename>${DIR_FILE}\product_category_file.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
@@ -620,7 +620,7 @@
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>C:\OMEGA\REPOSITORIO\product_subcategory_file.txt</filename>
+      <filename>${DIR_FILE}\product_subcategory_file.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
@@ -635,7 +635,7 @@
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>C:\OMEGA\REPOSITORIO\state_province_file.txt</filename>
+      <filename>${DIR_FILE}\state_province_file.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
@@ -650,7 +650,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>C:\OMEGA\REPOSITORIO\product_category_file.txt</filename>
+      <filename>${DIR_FILE}\product_category_file.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -668,7 +668,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>C:\OMEGA\REPOSITORIO\product_subcategory_file.txt</filename>
+      <filename>${DIR_FILE}\product_subcategory_file.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -686,7 +686,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>C:\OMEGA\REPOSITORIO\state_province_file.txt</filename>
+      <filename>${DIR_FILE}\state_province_file.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -708,7 +708,7 @@
       <include_subfolders>N</include_subfolders>
       <fields>
         <field>
-          <name>C:\OMEGA\REPOSITORIO</name>
+          <name>${DIR_FILE}</name>
           <filemask>^.*\.txt$</filemask>
         </field>
       </fields>
