@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>main</name>
+  <name>replica_4</name>
   <description/>
   <extended_description/>
   <job_version/>
   <directory>/</directory>
   <created_user>-</created_user>
-  <created_date>2023/10/05 17:31:43.897</created_date>
+  <created_date>2023/10/07 16:57:33.874</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/10/05 17:31:43.897</modified_date>
+  <modified_date>2023/10/07 16:57:33.874</modified_date>
   <parameters>
     </parameters>
+  <connection>
+    <name>ORACLE_CONNECTION</name>
+    <server>${HOSTNAME}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${DATABASENAME}</database>
+    <port>${PORTNUMBER}</port>
+    <username>${USERNAME}</username>
+    <password>${PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${PORTNUMBER}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STRICT_NUMBER_38_INTERPRETATION</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <slaveservers>
     </slaveservers>
   <job-log-table>
@@ -304,18 +359,74 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>200</xloc>
-      <yloc>100</yloc>
+      <xloc>64</xloc>
+      <yloc>448</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>parameters</name>
+      <name>Truncate tables</name>
+      <description/>
+      <type>TRUNCATE_TABLES</type>
+      <attributes/>
+      <connection>ORACLE_CONNECTION</connection>
+      <arg_from_previous>N</arg_from_previous>
+      <fields>
+        <field>
+          <name>PRODUCT_CATEGORY</name>
+          <schemaname>ODS</schemaname>
+        </field>
+        <field>
+          <name>PRODUCT_SUBCATEGORY</name>
+          <schemaname>ODS</schemaname>
+        </field>
+        <field>
+          <name>STATE_PROVINCE</name>
+          <schemaname>ODS</schemaname>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>272</xloc>
+      <yloc>432</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Truncate error</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <attributes/>
+      <logmessage>ERROR AL TRUNCAR TABLAS DE REPLICA 4</logmessage>
+      <loglevel>Error</loglevel>
+      <logsubject>ERROR</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>432</xloc>
+      <yloc>608</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Abort job 2</name>
+      <description/>
+      <type>ABORT</type>
+      <attributes/>
+      <message/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>560</xloc>
+      <yloc>608</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Product Category</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\OMEGA\REPOSITORIO\TRANSFORMATIONS\parameters.ktr</filename>
+      <filename>C:\OMEGA\REPOSITORIO\TRANSFORMATIONS\ProductCategory.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -343,23 +454,50 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>400</xloc>
-      <yloc>96</yloc>
+      <xloc>624</xloc>
+      <yloc>32</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>parameters error</name>
+      <name>OK</name>
       <description/>
       <type>WRITE_TO_LOG</type>
       <attributes/>
-      <logmessage>ERROR DURANTE LA CARGA DE LOS PARAMETROS</logmessage>
+      <logmessage>CARGA DE REPLICA 4 FINALIZADA CON EXITO</logmessage>
+      <loglevel>Basic</loglevel>
+      <logsubject>FINALIZADO</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>816</xloc>
+      <yloc>128</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <attributes/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1008</xloc>
+      <yloc>128</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Error</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <attributes/>
+      <logmessage>ERROR AL CARGAR REPLICA 4</logmessage>
       <loglevel>Error</loglevel>
       <logsubject>ERROR</logsubject>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>400</xloc>
-      <yloc>272</yloc>
+      <xloc>832</xloc>
+      <yloc>384</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -371,92 +509,37 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>400</xloc>
+      <xloc>1008</xloc>
       <yloc>384</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Success</name>
+      <name>Dummy</name>
       <description/>
-      <type>SUCCESS</type>
+      <type>SPECIAL</type>
       <attributes/>
+      <start>N</start>
+      <dummy>Y</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>816</xloc>
-      <yloc>96</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Replica</name>
-      <description/>
-      <type>JOB</type>
-      <attributes/>
-      <specification_method>filename</specification_method>
-      <job_object_id/>
-      <filename>C:/OMEGA/REPOSITORIO/JOBS/replica.kjb</filename>
-      <jobname/>
-      <directory/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Nothing</loglevel>
-      <slave_server_name/>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <expand_remote_job>N</expand_remote_job>
-      <create_parent_folder>N</create_parent_folder>
-      <pass_export>N</pass_export>
-      <run_configuration>Pentaho local</run_configuration>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <set_append_logfile>N</set_append_logfile>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>592</xloc>
-      <yloc>96</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>error</name>
-      <description/>
-      <type>WRITE_TO_LOG</type>
-      <attributes/>
-      <logmessage>ERROR DURANTE FLUJO DE CARGA</logmessage>
-      <loglevel>Error</loglevel>
-      <logsubject>ERROR</logsubject>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>592</xloc>
-      <yloc>272</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Abort job 2</name>
-      <description/>
-      <type>ABORT</type>
-      <attributes/>
-      <message/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>592</xloc>
-      <yloc>384</yloc>
+      <xloc>432</xloc>
+      <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
   <hops>
     <hop>
       <from>Start</from>
-      <to>parameters</to>
+      <to>Truncate tables</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -464,8 +547,8 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>parameters</from>
-      <to>parameters error</to>
+      <from>Truncate tables</from>
+      <to>Truncate error</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -473,8 +556,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>parameters error</from>
-      <to>Abort job</to>
+      <from>Truncate error</from>
+      <to>Abort job 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -482,8 +565,8 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>parameters</from>
-      <to>Replica</to>
+      <from>Product Category</from>
+      <to>OK</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -491,7 +574,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Replica</from>
+      <from>OK</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -500,8 +583,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Replica</from>
-      <to>error</to>
+      <from>Product Category</from>
+      <to>Error</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -509,12 +592,30 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>error</from>
-      <to>Abort job 2</to>
+      <from>Error</from>
+      <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Truncate tables</from>
+      <to>Dummy</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Product Category</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
   </hops>
