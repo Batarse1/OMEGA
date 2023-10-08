@@ -689,7 +689,7 @@
       </field>
       <field>
         <name>Weight</name>
-        <type>String</type>
+        <type>Number</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -749,7 +749,7 @@
       </field>
       <field>
         <name>ProductSubcategoryID</name>
-        <type>String</type>
+        <type>Number</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -761,7 +761,7 @@
       </field>
       <field>
         <name>ProductModelID</name>
-        <type>String</type>
+        <type>Number</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -785,7 +785,7 @@
       </field>
       <field>
         <name>SellEndDate</name>
-        <type>String</type>
+        <type>Date</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -797,7 +797,7 @@
       </field>
       <field>
         <name>DiscontinuedDate</name>
-        <type>String</type>
+        <type>Date</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
