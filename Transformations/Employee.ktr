@@ -529,7 +529,7 @@
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
-      <name>C:\SOURCES\Employee.xlsx</name>
+      <name>${DIR_FILE}\SOURCES\Employee.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>

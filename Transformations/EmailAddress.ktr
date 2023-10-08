@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
     <name>EmailAddress</name>
@@ -5,7 +6,7 @@
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <directory>/TRANSFORMATIONS</directory>
+    <directory>/</directory>
     <parameters>
     </parameters>
     <log>
@@ -523,7 +524,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\OMEGA\SOURCES\EmailAddress.xlsx</name>
+      <name>${DIR_FILE}\SOURCES\EmailAddress.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
