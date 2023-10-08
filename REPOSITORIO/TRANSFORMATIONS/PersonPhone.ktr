@@ -436,11 +436,11 @@
   <notepads>
   </notepads>
   <connection>
-    <name>ORACLE</name>
+    <name>ORACLE_CONECTION</name>
     <server>localhost</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>orcl</database>
+    <database>ORCLCDB</database>
     <port>1521</port>
     <username>SYSTEM</username>
     <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
@@ -493,7 +493,7 @@
   <order>
     <hop>
       <from>PERSON_PHONE</from>
-      <to>Select values</to>
+      <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -621,102 +621,6 @@
     </GUI>
   </step>
   <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>BusinessEntityID</name>
-        <rename>BUSINESS_ENTITY_ID</rename>
-        <type>Number</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PhoneNumber</name>
-        <rename>PHONE_NUMBER</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PhoneNumberTypeID</name>
-        <rename>PHONE_NUMBER_TYPE_ID</rename>
-        <type>Number</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>ModifiedDate</name>
-        <rename>MODIFIED_DATE</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>yyyy/MM/dd</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>96</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Table output</name>
     <type>TableOutput</type>
     <description/>
@@ -727,8 +631,8 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ORACLE</connection>
-    <schema>C##DOS</schema>
+    <connection>ORACLE_CONECTION</connection>
+    <schema>ODS</schema>
     <table>PERSON_PHONE</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
@@ -750,16 +654,12 @@
         <stream_name>BusinessEntityID</stream_name>
       </field>
       <field>
-        <column_name>EMAIL_ADDRESS_ID</column_name>
-        <stream_name>EmailAddressID</stream_name>
+        <column_name>PHONE_NUMBER</column_name>
+        <stream_name>PhoneNumber</stream_name>
       </field>
       <field>
-        <column_name>EMAIL_ADDRESS</column_name>
-        <stream_name>EmailAddress</stream_name>
-      </field>
-      <field>
-        <column_name>ROWGUID</column_name>
-        <stream_name>rowguid</stream_name>
+        <column_name>PHONE_NUMBER_TYPE_ID</column_name>
+        <stream_name>PhoneNumberTypeID</stream_name>
       </field>
       <field>
         <column_name>MODIFIED_DATE</column_name>
@@ -775,7 +675,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
+      <xloc>576</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
