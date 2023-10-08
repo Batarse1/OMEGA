@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>main</name>
+  <name>replica</name>
   <description/>
   <extended_description/>
   <job_version/>
   <directory>/</directory>
   <created_user>-</created_user>
-  <created_date>2023/10/05 17:31:43.897</created_date>
+  <created_date>2023/10/07 16:38:30.057</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/10/05 17:31:43.897</modified_date>
+  <modified_date>2023/10/07 16:38:30.057</modified_date>
   <parameters>
     </parameters>
   <slaveservers>
@@ -304,97 +304,18 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>200</xloc>
-      <yloc>100</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>parameters</name>
-      <description/>
-      <type>TRANS</type>
-      <attributes/>
-      <specification_method>filename</specification_method>
-      <trans_object_id/>
-      <filename>C:\OMEGA\REPOSITORIO\TRANSFORMATIONS\parameters.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <create_parent_folder>N</create_parent_folder>
-      <logging_remote_work>N</logging_remote_work>
-      <run_configuration>Pentaho local</run_configuration>
-      <suppress_result_data>N</suppress_result_data>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>400</xloc>
-      <yloc>96</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>parameters error</name>
-      <description/>
-      <type>WRITE_TO_LOG</type>
-      <attributes/>
-      <logmessage>ERROR DURANTE LA CARGA DE LOS PARAMETROS</logmessage>
-      <loglevel>Error</loglevel>
-      <logsubject>ERROR</logsubject>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>400</xloc>
+      <xloc>80</xloc>
       <yloc>272</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Abort job</name>
-      <description/>
-      <type>ABORT</type>
-      <attributes/>
-      <message/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>400</xloc>
-      <yloc>384</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Success</name>
-      <description/>
-      <type>SUCCESS</type>
-      <attributes/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>816</xloc>
-      <yloc>96</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Replica</name>
+      <name>replica 4</name>
       <description/>
       <type>JOB</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <job_object_id/>
-      <filename>C:/OMEGA/REPOSITORIO/JOBS/replica.kjb</filename>
+      <filename>C:/OMEGA/REPOSITORIO/JOBS/replica_4.kjb</filename>
       <jobname/>
       <directory/>
       <arg_from_previous>N</arg_from_previous>
@@ -420,16 +341,65 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
+      <xloc>336</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Dummy</name>
+      <description/>
+      <type>SPECIAL</type>
+      <attributes/>
+      <start>N</start>
+      <dummy>Y</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
       <xloc>592</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>error</name>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <attributes/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>992</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Ok</name>
       <description/>
       <type>WRITE_TO_LOG</type>
       <attributes/>
-      <logmessage>ERROR DURANTE FLUJO DE CARGA</logmessage>
+      <logmessage>CARGA DE REPLICAS FINALIZADA CON EXITO</logmessage>
+      <loglevel>Basic</loglevel>
+      <logsubject>FINALIZADO</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>768</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Error</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <attributes/>
+      <logmessage>ERROR AL CARGAR REPLICAS</logmessage>
       <loglevel>Error</loglevel>
       <logsubject>ERROR</logsubject>
       <parallel>N</parallel>
@@ -440,7 +410,7 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Abort job 2</name>
+      <name>Abort job</name>
       <description/>
       <type>ABORT</type>
       <attributes/>
@@ -448,15 +418,15 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>592</xloc>
-      <yloc>384</yloc>
+      <xloc>768</xloc>
+      <yloc>272</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
   <hops>
     <hop>
       <from>Start</from>
-      <to>parameters</to>
+      <to>replica 4</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -464,26 +434,8 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>parameters</from>
-      <to>parameters error</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>parameters error</from>
-      <to>Abort job</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>parameters</from>
-      <to>Replica</to>
+      <from>replica 4</from>
+      <to>Dummy</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -491,7 +443,16 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Replica</from>
+      <from>Dummy</from>
+      <to>Ok</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Ok</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -500,8 +461,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Replica</from>
-      <to>error</to>
+      <from>replica 4</from>
+      <to>Error</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -509,8 +470,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>error</from>
-      <to>Abort job 2</to>
+      <from>Error</from>
+      <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
