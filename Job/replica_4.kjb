@@ -426,7 +426,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${DIR_FILE}Transformations\ProductCategory.ktr</filename>
+      <filename>${DIR_FILE}\Transformations\ProductCategory.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -529,7 +529,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${DIR_FILE}Transformations\ProductSubcategory.ktr</filename>
+      <filename>${DIR_FILE}\Transformations\ProductSubcategory.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -568,7 +568,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${DIR_FILE}Transformations\StateProvince.ktr</filename>
+      <filename>${DIR_FILE}\Transformations\StateProvince.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -709,7 +709,7 @@
       <fields>
         <field>
           <name>${DIR_FILE}</name>
-          <filemask>^.*\.txt$</filemask>
+          <filemask>^.(product_category_file|product_subcategory_file|state_province_file).txt$</filemask>
         </field>
       </fields>
       <parallel>N</parallel>

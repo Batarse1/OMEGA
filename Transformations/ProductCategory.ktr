@@ -529,7 +529,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\OMEGA\SOURCES\ProductCategory.xlsx</name>
+      <name>${DIR_FILE}\SOURCES\ProductCategory.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>

@@ -529,7 +529,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\OMEGA\SOURCES\StateProvince.xlsx</name>
+      <name>${DIR_FILE}\SOURCES\StateProvince.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
