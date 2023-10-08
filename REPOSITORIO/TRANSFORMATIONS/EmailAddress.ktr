@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>EmailAddressTrf</name>
+    <name>EmailAddress</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <directory>/</directory>
+    <directory>/TRANSFORMATIONS</directory>
     <parameters>
     </parameters>
     <log>
@@ -429,7 +428,7 @@
     <created_user>-</created_user>
     <created_date>2023/10/04 22:37:40.868</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/10/07 00:41:26.224</modified_date>
+    <modified_date>2023/10/08 02:58:38.033</modified_date>
     <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -440,10 +439,10 @@
     <server>localhost</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>ORCLCDB</database>
+    <database>xe</database>
     <port>1521</port>
     <username>SYSTEM</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10dd9facd9</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
