@@ -437,13 +437,13 @@
   </notepads>
   <connection>
     <name>ORACLE_CONNECTION</name>
-    <server>localhost</server>
+    <server>${HOSTNAME}</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>xe</database>
-    <port>1521</port>
-    <username>SYSTEM</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce10dd9facd9</password>
+    <database>${DATABASENAME}</database>
+    <port>${PORTNUMBER}</port>
+    <username>${USERNAME}</username>
+    <password>${PASSWORD}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -462,7 +462,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>1521</attribute>
+        <attribute>${PORTNUMBER}</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -524,7 +524,12 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>${DIR_FILE}\EmployeeDepartmentHistory.xlsx</name>
+      <name>${DIR_FILE}\SOURCES\EmployeeDepartmentHistory.xlsx</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -656,7 +661,7 @@
       <schema_name/>
     </partitioning>
     <connection>ORACLE_CONNECTION</connection>
-    <schema>C##DOS</schema>
+    <schema>${SCHEMA}</schema>
     <table>EMPLOYEE_DEPARTMENT_HISTORY</table>
     <commit>1000</commit>
     <truncate>Y</truncate>

@@ -394,7 +394,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <job_object_id/>
-      <filename>${DIR_FILE}\job\replica.kjb</filename>
+      <filename>${DIR_FILE}\Job\replica.kjb</filename>
       <jobname/>
       <directory/>
       <arg_from_previous>N</arg_from_previous>

@@ -436,14 +436,14 @@
   <notepads>
   </notepads>
   <connection>
-    <name>ORACLE_CONECTION</name>
-    <server>localhost</server>
+    <name>ORACLE_CONNECTION</name>
+    <server>${HOSTNAME}</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>ORCLCDB</database>
-    <port>1521</port>
-    <username>SYSTEM</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <database>${DATABASENAME}</database>
+    <port>${PORTNUMBER}</port>
+    <username>${USERNAME}</username>
+    <password>${PASSWORD}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -462,7 +462,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>1521</attribute>
+        <attribute>${PORTNUMBER}</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -524,7 +524,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>${DIR_FILE}\\SOURCES\Product.xlsx</name>
+      <name>${DIR_FILE}\SOURCES\Product.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -883,8 +883,8 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ORACLE_CONECTION</connection>
-    <schema>ODS</schema>
+    <connection>ORACLE_CONNECTION</connection>
+    <schema>${SCHEMA}</schema>
     <table>PRODUCT</table>
     <commit>1000</commit>
     <truncate>Y</truncate>

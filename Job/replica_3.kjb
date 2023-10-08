@@ -13,13 +13,13 @@
     </parameters>
   <connection>
     <name>ORACLE_CONNECTION</name>
-    <server>localhost</server>
+    <server>${HOSTNAME}</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>ORCLCDB</database>
-    <port>1521</port>
-    <username>SYSTEM</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <database>${DATABASENAME}</database>
+    <port>${PORTNUMBER}</port>
+    <username>${USERNAME}</username>
+    <password>${PASSWORD}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -38,7 +38,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>1521</attribute>
+        <attribute>${PORTNUMBER}</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -412,19 +412,19 @@
       <fields>
         <field>
           <name>EMPLOYEE_PAY_HISTORY</name>
-          <schemaname>ODS</schemaname>
+          <schemaname>${SCHEMA}</schemaname>
         </field>
         <field>
           <name>PERSON_PHONE</name>
-          <schemaname>ODS</schemaname>
+          <schemaname>${SCHEMA}</schemaname>
         </field>
         <field>
           <name>PRODUCT</name>
-          <schemaname>ODS</schemaname>
+          <schemaname>${SCHEMA}</schemaname>
         </field>
         <field>
           <name>PERSON</name>
-          <schemaname>ODS</schemaname>
+          <schemaname>${SCHEMA}</schemaname>
         </field>
       </fields>
       <parallel>N</parallel>
