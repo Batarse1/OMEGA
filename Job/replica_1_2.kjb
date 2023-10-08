@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>replica_2</name>
+  <name>replica_1_2</name>
   <description/>
   <extended_description/>
   <job_version/>
@@ -9,7 +9,7 @@
   <created_user>-</created_user>
   <created_date>2023/09/01 21:33:23.734</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/10/08 13:22:58.288</modified_date>
+  <modified_date>2023/10/08 15:50:14.096</modified_date>
   <parameters>
     </parameters>
   <connection>
@@ -787,7 +787,35 @@
       <fields>
         <field>
           <name>${DIR_FILE}\Transformations</name>
-          <filemask>^.*\.txt$</filemask>
+          <filemask>file1.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>file2.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>file3.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>file4.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>file5.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>file6.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>file7.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>file8.txt</filemask>
         </field>
       </fields>
       <parallel>N</parallel>
