@@ -709,7 +709,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\Transformations\person.txt</filename>
+      <filename>${DIR_FILE}\Transformations\person_file.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -718,7 +718,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1184</xloc>
+      <xloc>1232</xloc>
       <yloc>64</yloc>
       <attributes_kjc/>
     </entry>
@@ -727,7 +727,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\Transformations\file2.txt</filename>
+      <filename>${DIR_FILE}\Transformations\employee_deparment_history_file.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -736,7 +736,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1184</xloc>
+      <xloc>1232</xloc>
       <yloc>176</yloc>
       <attributes_kjc/>
     </entry>
@@ -754,7 +754,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1184</xloc>
+      <xloc>1232</xloc>
       <yloc>272</yloc>
       <attributes_kjc/>
     </entry>
@@ -772,7 +772,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1184</xloc>
+      <xloc>1232</xloc>
       <yloc>368</yloc>
       <attributes_kjc/>
     </entry>
@@ -786,7 +786,19 @@
       <fields>
         <field>
           <name>${DIR_FILE}\Transformations</name>
-          <filemask>^.*\.txt$</filemask>
+          <filemask>product_file.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>person_file.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>employee_department_history_file.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>person_phone_file.txt</filemask>
         </field>
       </fields>
       <parallel>N</parallel>
@@ -851,7 +863,7 @@
       <to>Person</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
@@ -973,42 +985,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Employee Department History File</from>
-      <to>Wait Employee Deparment History</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Person Phone File</from>
-      <to>Wait Person Phone</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Product File</from>
-      <to>Wait Product</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Wait Product</from>
-      <to>Delete files</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Delete files</from>
       <to>OK</to>
       <from_nr>0</from_nr>
@@ -1020,6 +996,42 @@
     <hop>
       <from>OK</from>
       <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Wait Person</from>
+      <to>Wait Employee Deparment History</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Wait Employee Deparment History</from>
+      <to>Wait Person Phone</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Wait Person Phone</from>
+      <to>Wait Product</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Wait Product</from>
+      <to>Delete files</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
