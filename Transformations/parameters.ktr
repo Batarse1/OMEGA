@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
     <name>parameters</name>
@@ -6,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>/Transformations</directory>
+    <directory>/</directory>
     <parameters>
     </parameters>
     <log>
@@ -436,14 +437,14 @@
   <notepads>
   </notepads>
   <connection>
-    <name>ORACLE_CONNECTION</name>
+    <name>PARAMETROS_ORACLE_CONNECTION</name>
     <server>localhost</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>xe</database>
+    <database>orcl</database>
     <port>1521</port>
-    <username>SYSTEM</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce10dd9facd9</password>
+    <username>PARAMETROS</username>
+    <password>Encrypted 2be98afc86aa78285b918a375ca80a0c9</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -671,30 +672,39 @@
     <fields>
       <field>
         <name>SISTEMA</name>
+        <rename/>
       </field>
       <field>
         <name>HOSTNAME</name>
+        <rename/>
       </field>
       <field>
         <name>DATABASENAME</name>
+        <rename/>
       </field>
       <field>
         <name>PORTNUMBER</name>
+        <rename/>
       </field>
       <field>
         <name>USERNAME</name>
+        <rename/>
       </field>
       <field>
         <name>PASSWORD</name>
+        <rename/>
       </field>
       <field>
         <name>SCHEMA</name>
+        <rename/>
       </field>
       <field>
         <name>SCHEMA_DW</name>
+        <rename/>
       </field>
       <field>
         <name>DIR_FILE</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -847,7 +857,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ORACLE_CONNECTION</connection>
+    <connection>PARAMETROS_ORACLE_CONNECTION</connection>
     <sql>SELECT SISTEMA, NOMBRE_PARAM, VALOR_PARAM FROM PARAMETROS.PARAMETROS
 WHERE SISTEMA = 'OMEGA'</sql>
     <limit>0</limit>
@@ -876,8 +886,8 @@ WHERE SISTEMA = 'OMEGA'</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>es_SV</date_format_locale>
-        <date_format_timezone>America/El_Salvador</date_format_timezone>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Guatemala</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
@@ -899,8 +909,8 @@ WHERE SISTEMA = 'OMEGA'</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>es_SV</date_format_locale>
-        <date_format_timezone>America/El_Salvador</date_format_timezone>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Guatemala</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
@@ -922,8 +932,8 @@ WHERE SISTEMA = 'OMEGA'</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>es_SV</date_format_locale>
-        <date_format_timezone>America/El_Salvador</date_format_timezone>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Guatemala</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
     </row-meta>

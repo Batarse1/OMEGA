@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>replica_4</name>
+  <name>replica_3</name>
   <description/>
   <extended_description/>
   <job_version/>
   <directory>/</directory>
   <created_user>-</created_user>
-  <created_date>2023/10/07 16:57:33.874</created_date>
+  <created_date>2023/10/08 14:36:10.320</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/10/07 16:57:33.874</modified_date>
+  <modified_date>2023/10/08 14:36:10.320</modified_date>
   <parameters>
     </parameters>
   <connection>
     <name>ORACLE_CONNECTION</name>
-    <server>${HOSTNAME}</server>
+    <server>localhost</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>${DATABASENAME}</database>
-    <port>${PORTNUMBER}</port>
-    <username>${USERNAME}</username>
-    <password>${PASSWORD}</password>
+    <database>ORCLCDB</database>
+    <port>1521</port>
+    <username>SYSTEM</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -38,7 +38,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>${PORTNUMBER}</attribute>
+        <attribute>1521</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -342,91 +342,13 @@
   <shared_objects_file/>
   <entries>
     <entry>
-      <name>Start</name>
-      <description/>
-      <type>SPECIAL</type>
-      <attributes/>
-      <start>Y</start>
-      <dummy>N</dummy>
-      <repeat>N</repeat>
-      <schedulerType>0</schedulerType>
-      <intervalSeconds>0</intervalSeconds>
-      <intervalMinutes>60</intervalMinutes>
-      <hour>12</hour>
-      <minutes>0</minutes>
-      <weekDay>1</weekDay>
-      <DayOfMonth>1</DayOfMonth>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>64</xloc>
-      <yloc>432</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Truncate tables</name>
-      <description/>
-      <type>TRUNCATE_TABLES</type>
-      <attributes/>
-      <connection>ORACLE_CONNECTION</connection>
-      <arg_from_previous>N</arg_from_previous>
-      <fields>
-        <field>
-          <name>PRODUCT_CATEGORY</name>
-          <schemaname>ODS</schemaname>
-        </field>
-        <field>
-          <name>PRODUCT_SUBCATEGORY</name>
-          <schemaname>ODS</schemaname>
-        </field>
-        <field>
-          <name>STATE_PROVINCE</name>
-          <schemaname>ODS</schemaname>
-        </field>
-      </fields>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>272</xloc>
-      <yloc>432</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Truncate error</name>
-      <description/>
-      <type>WRITE_TO_LOG</type>
-      <attributes/>
-      <logmessage>ERROR AL TRUNCAR TABLAS DE REPLICA 4</logmessage>
-      <loglevel>Error</loglevel>
-      <logsubject>ERROR</logsubject>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>432</xloc>
-      <yloc>608</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Abort job</name>
-      <description/>
-      <type>ABORT</type>
-      <attributes/>
-      <message/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>560</xloc>
-      <yloc>608</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Product Category</name>
+      <name>Person</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${DIR_FILE}\Transformations\ProductCategory.ktr</filename>
+      <filename>${DIR_FILE}\Transformations\Person.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -454,50 +376,179 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>752</xloc>
-      <yloc>96</yloc>
+      <xloc>656</xloc>
+      <yloc>64</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>OK</name>
+      <name>Start</name>
       <description/>
-      <type>WRITE_TO_LOG</type>
+      <type>SPECIAL</type>
       <attributes/>
-      <logmessage>CARGA DE REPLICA 4 FINALIZADA CON EXITO</logmessage>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>80</xloc>
+      <yloc>208</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Truncate tables</name>
+      <description/>
+      <type>TRUNCATE_TABLES</type>
+      <attributes/>
+      <connection>ORACLE_CONNECTION</connection>
+      <arg_from_previous>N</arg_from_previous>
+      <fields>
+        <field>
+          <name>EMPLOYEE_PAY_HISTORY</name>
+          <schemaname>ODS</schemaname>
+        </field>
+        <field>
+          <name>PERSON_PHONE</name>
+          <schemaname>ODS</schemaname>
+        </field>
+        <field>
+          <name>PRODUCT</name>
+          <schemaname>ODS</schemaname>
+        </field>
+        <field>
+          <name>PERSON</name>
+          <schemaname>ODS</schemaname>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>240</xloc>
+      <yloc>208</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Product</name>
+      <description/>
+      <type>TRANS</type>
+      <attributes/>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${DIR_FILE}\Transformations\Product.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
       <loglevel>Basic</loglevel>
-      <logsubject>FINALIZADO</logsubject>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1008</xloc>
-      <yloc>608</yloc>
+      <xloc>656</xloc>
+      <yloc>352</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Success</name>
+      <name>PersonPhone</name>
       <description/>
-      <type>SUCCESS</type>
+      <type>TRANS</type>
       <attributes/>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${DIR_FILE}\Transformations\PersonPhone.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>864</xloc>
-      <yloc>608</yloc>
+      <xloc>656</xloc>
+      <yloc>272</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Error</name>
+      <name>EmployeeDepartmentHistory</name>
       <description/>
-      <type>WRITE_TO_LOG</type>
+      <type>TRANS</type>
       <attributes/>
-      <logmessage>ERROR AL CARGAR REPLICA 4</logmessage>
-      <loglevel>Error</loglevel>
-      <logsubject>ERROR</logsubject>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${DIR_FILE}\Transformations\EmployeeDepartmentHistory.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>560</xloc>
-      <yloc>464</yloc>
+      <xloc>656</xloc>
+      <yloc>176</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -518,139 +569,147 @@
       <parallel>Y</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>416</xloc>
-      <yloc>256</yloc>
+      <xloc>384</xloc>
+      <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Product Subcategory</name>
+      <name>Error2</name>
       <description/>
-      <type>TRANS</type>
+      <type>WRITE_TO_LOG</type>
       <attributes/>
-      <specification_method>filename</specification_method>
-      <trans_object_id/>
-      <filename>${DIR_FILE}\Transformations\ProductSubcategory.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
+      <logmessage>REPLICA_3: ERROR AL CARGAR DATOS</logmessage>
+      <loglevel>Error</loglevel>
+      <logsubject>ERROR</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>448</xloc>
+      <yloc>400</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Abort job</name>
+      <description/>
+      <type>ABORT</type>
+      <attributes/>
+      <message/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>448</xloc>
+      <yloc>528</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Error</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <attributes/>
+      <logmessage>REPLICA_3: ERROR AL TRUNCAR TABLAS</logmessage>
+      <loglevel>Error</loglevel>
+      <logsubject>ERROR</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>240</xloc>
+      <yloc>368</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Abort job 2</name>
+      <description/>
+      <type>ABORT</type>
+      <attributes/>
+      <message/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>240</xloc>
+      <yloc>480</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>OK</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <attributes/>
+      <logmessage>CARGA DE DIMENSIONES FINALIZADA CON EXITO</logmessage>
       <loglevel>Basic</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <create_parent_folder>N</create_parent_folder>
-      <logging_remote_work>N</logging_remote_work>
-      <run_configuration>Pentaho local</run_configuration>
-      <suppress_result_data>N</suppress_result_data>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
+      <logsubject>FINALIZADO</logsubject>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>752</xloc>
-      <yloc>256</yloc>
+      <xloc>1200</xloc>
+      <yloc>496</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>State Province</name>
-      <description/>
-      <type>TRANS</type>
-      <attributes/>
-      <specification_method>filename</specification_method>
-      <trans_object_id/>
-      <filename>${DIR_FILE}\Transformations\StateProvince.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <create_parent_folder>N</create_parent_folder>
-      <logging_remote_work>N</logging_remote_work>
-      <run_configuration>Pentaho local</run_configuration>
-      <suppress_result_data>N</suppress_result_data>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>752</xloc>
-      <yloc>432</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Product Category File</name>
+      <name>Person File</name>
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\product_category_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\person_file.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>928</xloc>
-      <yloc>96</yloc>
+      <yloc>64</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Product Subcategory File</name>
+      <name>Employee Department History File</name>
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\product_subcategory_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\employee_department_history_file.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>928</xloc>
-      <yloc>256</yloc>
+      <yloc>176</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>State Province File</name>
+      <name>Person Phone File</name>
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\state_province_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\person_phone_file.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>928</xloc>
-      <yloc>432</yloc>
+      <yloc>272</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Wait Product Category File</name>
+      <name>Product File</name>
+      <description/>
+      <type>CREATE_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\product_file.txt</filename>
+      <fail_if_file_exists>Y</fail_if_file_exists>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>928</xloc>
+      <yloc>368</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Wait Person</name>
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\product_category_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\person_file.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -659,16 +718,16 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1168</xloc>
-      <yloc>96</yloc>
+      <xloc>1232</xloc>
+      <yloc>64</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Wait Product SubCategory File</name>
+      <name>Wait Employee Deparment History</name>
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\product_subcategory_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\employee_deparment_history_file.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -677,16 +736,16 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1168</xloc>
-      <yloc>256</yloc>
+      <xloc>1232</xloc>
+      <yloc>176</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Wait State Province File</name>
+      <name>Wait Person Phone</name>
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\state_province_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\person_phone_file.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -695,8 +754,26 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1168</xloc>
-      <yloc>432</yloc>
+      <xloc>1232</xloc>
+      <yloc>272</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Wait Product</name>
+      <description/>
+      <type>WAIT_FOR_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\product_file.txt</filename>
+      <maximum_timeout>3600</maximum_timeout>
+      <check_cycle_time>2</check_cycle_time>
+      <success_on_timeout>N</success_on_timeout>
+      <file_size_check>N</file_size_check>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1232</xloc>
+      <yloc>368</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -708,15 +785,39 @@
       <include_subfolders>N</include_subfolders>
       <fields>
         <field>
-          <name>${DIR_FILE}</name>
-          <filemask>^.(product_category_file|product_subcategory_file|state_province_file).txt$</filemask>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>product_file.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>person_file.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>employee_department_history_file.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}\Transformations</name>
+          <filemask>person_phone_file.txt</filemask>
         </field>
       </fields>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1168</xloc>
-      <yloc>608</yloc>
+      <xloc>944</xloc>
+      <yloc>496</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <attributes/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1312</xloc>
+      <yloc>496</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -732,7 +833,16 @@
     </hop>
     <hop>
       <from>Truncate tables</from>
-      <to>Truncate error</to>
+      <to>Dummy</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Truncate tables</from>
+      <to>Error</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -740,13 +850,148 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Truncate error</from>
+      <from>Error</from>
+      <to>Abort job 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Person</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>EmployeeDepartmentHistory</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>PersonPhone</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Product</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Person</from>
+      <to>Error2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>EmployeeDepartmentHistory</from>
+      <to>Error2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Error2</from>
       <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>PersonPhone</from>
+      <to>Error2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Product</from>
+      <to>Error2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Person</from>
+      <to>Person File</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>EmployeeDepartmentHistory</from>
+      <to>Employee Department History File</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>PersonPhone</from>
+      <to>Person Phone File</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Product</from>
+      <to>Product File</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Person File</from>
+      <to>Wait Person</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Delete files</from>
+      <to>OK</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>OK</from>
@@ -758,17 +1003,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Product Category</from>
-      <to>Error</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Truncate tables</from>
-      <to>Dummy</to>
+      <from>Wait Person</from>
+      <to>Wait Employee Deparment History</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -776,62 +1012,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Product Subcategory</from>
-      <to>Error</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Dummy</from>
-      <to>Product Category</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Dummy</from>
-      <to>Product Subcategory</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>State Province</from>
-      <to>Error</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Dummy</from>
-      <to>State Province</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Error</from>
-      <to>Abort job</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Product Category</from>
-      <to>Product Category File</to>
+      <from>Wait Employee Deparment History</from>
+      <to>Wait Person Phone</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -839,8 +1021,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Product Subcategory</from>
-      <to>Product Subcategory File</to>
+      <from>Wait Person Phone</from>
+      <to>Wait Product</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -848,53 +1030,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>State Province</from>
-      <to>State Province File</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Product Category File</from>
-      <to>Wait Product Category File</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Wait Product Category File</from>
-      <to>Wait Product SubCategory File</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Wait Product SubCategory File</from>
-      <to>Wait State Province File</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Wait State Province File</from>
+      <from>Wait Product</from>
       <to>Delete files</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Delete files</from>
-      <to>OK</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
