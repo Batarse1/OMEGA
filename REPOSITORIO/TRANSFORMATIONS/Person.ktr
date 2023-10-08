@@ -436,11 +436,11 @@
   <notepads>
   </notepads>
   <connection>
-    <name>ORACLE</name>
+    <name>ORACLE_CONNECTION</name>
     <server>localhost</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>orcl</database>
+    <database>ORCLCDB</database>
     <port>1521</port>
     <username>SYSTEM</username>
     <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
@@ -493,7 +493,7 @@
   <order>
     <hop>
       <from>PERSON</from>
-      <to>Select values</to>
+      <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -729,255 +729,6 @@
     </GUI>
   </step>
   <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>BusinessEntityID</name>
-        <rename>BUSINESS_ENTITY_ID</rename>
-        <type>Number</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PersonType</name>
-        <rename>PERSON_TYPE</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>NameStyle</name>
-        <rename>NAME_STYLE</rename>
-        <type>Number</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>Title</name>
-        <rename>TITLE</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>FirstName</name>
-        <rename>FIRST_NAME</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>MiddleName</name>
-        <rename>MIDDLE_NAME</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>LastName</name>
-        <rename>LAST_NAME</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>Suffix</name>
-        <rename>SUFFIX</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>EmailPromotion</name>
-        <rename>EMAIL_PROMOTION</rename>
-        <type>Number</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>AdditionalContactInfo</name>
-        <rename>ADDITIONAL_CONTACT_INFO</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>Demographics</name>
-        <rename>DEMOGRAPHICS</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>rowguid</name>
-        <rename>ROWGUID</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>ModifiedDate</name>
-        <rename>MODIFIED_DATE</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>yyyy/MM/dd</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>560</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Table output</name>
     <type>TableOutput</type>
     <description/>
@@ -988,8 +739,8 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ORACLE</connection>
-    <schema>C##DOS</schema>
+    <connection>ORACLE_CONNECTION</connection>
+    <schema>ODS</schema>
     <table>PERSON</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
@@ -1011,12 +762,44 @@
         <stream_name>BusinessEntityID</stream_name>
       </field>
       <field>
-        <column_name>EMAIL_ADDRESS_ID</column_name>
-        <stream_name>EmailAddressID</stream_name>
+        <column_name>PERSON_TYPE</column_name>
+        <stream_name>PersonType</stream_name>
       </field>
       <field>
-        <column_name>EMAIL_ADDRESS</column_name>
-        <stream_name>EmailAddress</stream_name>
+        <column_name>NAME_STYLE</column_name>
+        <stream_name>NameStyle</stream_name>
+      </field>
+      <field>
+        <column_name>TITLE</column_name>
+        <stream_name>Title</stream_name>
+      </field>
+      <field>
+        <column_name>FIRST_NAME</column_name>
+        <stream_name>FirstName</stream_name>
+      </field>
+      <field>
+        <column_name>MIDDLE_NAME</column_name>
+        <stream_name>MiddleName</stream_name>
+      </field>
+      <field>
+        <column_name>LAST_NAME</column_name>
+        <stream_name>LastName</stream_name>
+      </field>
+      <field>
+        <column_name>SUFFIX</column_name>
+        <stream_name>Suffix</stream_name>
+      </field>
+      <field>
+        <column_name>EMAIL_PROMOTION</column_name>
+        <stream_name>EmailPromotion</stream_name>
+      </field>
+      <field>
+        <column_name>ADDITIONAL_CONTACT_INFO</column_name>
+        <stream_name>AdditionalContactInfo</stream_name>
+      </field>
+      <field>
+        <column_name>DEMOGRAPHICS</column_name>
+        <stream_name>Demographics</stream_name>
       </field>
       <field>
         <column_name>ROWGUID</column_name>
@@ -1036,7 +819,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>768</xloc>
+      <xloc>576</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
