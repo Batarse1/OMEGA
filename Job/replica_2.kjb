@@ -585,8 +585,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>432</xloc>
-      <yloc>400</yloc>
+      <xloc>336</xloc>
+      <yloc>592</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -598,8 +598,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>432</xloc>
-      <yloc>528</yloc>
+      <xloc>336</xloc>
+      <yloc>736</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -613,8 +613,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>896</xloc>
-      <yloc>496</yloc>
+      <xloc>1040</xloc>
+      <yloc>480</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -641,8 +641,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>226</xloc>
-      <yloc>480</yloc>
+      <xloc>224</xloc>
+      <yloc>496</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -793,8 +793,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>784</xloc>
-      <yloc>496</yloc>
+      <xloc>976</xloc>
+      <yloc>624</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -805,8 +805,296 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1008</xloc>
-      <yloc>496</yloc>
+      <xloc>1040</xloc>
+      <yloc>320</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Address</name>
+      <description/>
+      <type>TRANS</type>
+      <attributes/>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${DIR_FILE}\Transformations\Address.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>640</xloc>
+      <yloc>464</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>BusinessEntityAddress</name>
+      <description/>
+      <type>TRANS</type>
+      <attributes/>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${DIR_FILE}\Transformations\BusinessEntityAddress.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>640</xloc>
+      <yloc>752</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>CountryRegion</name>
+      <description/>
+      <type>TRANS</type>
+      <attributes/>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${DIR_FILE}\Transformations\CountryRegion.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>640</xloc>
+      <yloc>656</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>BusinessEntity</name>
+      <description/>
+      <type>TRANS</type>
+      <attributes/>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${DIR_FILE}\Transformations\BusinessEntity.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>640</xloc>
+      <yloc>560</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>File5</name>
+      <description/>
+      <type>CREATE_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\file5.txt</filename>
+      <fail_if_file_exists>Y</fail_if_file_exists>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>768</xloc>
+      <yloc>464</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>File6</name>
+      <description/>
+      <type>CREATE_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\file6.txt</filename>
+      <fail_if_file_exists>Y</fail_if_file_exists>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>768</xloc>
+      <yloc>560</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>File7</name>
+      <description/>
+      <type>CREATE_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\file7.txt</filename>
+      <fail_if_file_exists>Y</fail_if_file_exists>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>768</xloc>
+      <yloc>656</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>File8</name>
+      <description/>
+      <type>CREATE_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\file8.txt</filename>
+      <fail_if_file_exists>Y</fail_if_file_exists>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>768</xloc>
+      <yloc>752</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Wait5</name>
+      <description/>
+      <type>WAIT_FOR_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\file5.txt</filename>
+      <maximum_timeout>3600</maximum_timeout>
+      <check_cycle_time>2</check_cycle_time>
+      <success_on_timeout>N</success_on_timeout>
+      <file_size_check>N</file_size_check>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>880</xloc>
+      <yloc>464</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Wait8</name>
+      <description/>
+      <type>WAIT_FOR_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\file8.txt</filename>
+      <maximum_timeout>3600</maximum_timeout>
+      <check_cycle_time>2</check_cycle_time>
+      <success_on_timeout>N</success_on_timeout>
+      <file_size_check>N</file_size_check>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>880</xloc>
+      <yloc>752</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Wait7</name>
+      <description/>
+      <type>WAIT_FOR_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\file7.txt</filename>
+      <maximum_timeout>3600</maximum_timeout>
+      <check_cycle_time>2</check_cycle_time>
+      <success_on_timeout>N</success_on_timeout>
+      <file_size_check>N</file_size_check>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>880</xloc>
+      <yloc>656</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Wait6</name>
+      <description/>
+      <type>WAIT_FOR_FILE</type>
+      <attributes/>
+      <filename>${DIR_FILE}\Transformations\file6.txt</filename>
+      <maximum_timeout>3600</maximum_timeout>
+      <check_cycle_time>2</check_cycle_time>
+      <success_on_timeout>N</success_on_timeout>
+      <file_size_check>N</file_size_check>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>880</xloc>
+      <yloc>560</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -1001,15 +1289,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Wait4</from>
-      <to>Delete files</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Delete files</from>
       <to>OK</to>
       <from_nr>0</from_nr>
@@ -1021,6 +1300,123 @@
     <hop>
       <from>OK</from>
       <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Address</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>BusinessEntity</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>CountryRegion</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Address</from>
+      <to>File5</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>BusinessEntity</from>
+      <to>File6</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>CountryRegion</from>
+      <to>File7</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>BusinessEntityAddress</from>
+      <to>File8</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>BusinessEntityAddress</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Wait4</from>
+      <to>Wait5</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Wait5</from>
+      <to>Wait6</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Wait6</from>
+      <to>Wait7</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Wait7</from>
+      <to>Wait8</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Wait8</from>
+      <to>Delete files</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
