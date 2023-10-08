@@ -687,35 +687,27 @@
     <fields>
       <field>
         <name>StateProvinceID</name>
-        <rename/>
       </field>
       <field>
         <name>StateProvinceCode</name>
-        <rename/>
       </field>
       <field>
         <name>CountryRegionCode</name>
-        <rename/>
       </field>
       <field>
         <name>IsOnlyStateProvinceFlag</name>
-        <rename/>
       </field>
       <field>
         <name>Name</name>
-        <rename/>
       </field>
       <field>
         <name>TerritoryID</name>
-        <rename/>
       </field>
       <field>
         <name>rowguid</name>
-        <rename/>
       </field>
       <field>
         <name>ModifiedDate</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -881,7 +873,7 @@
       <schema_name/>
     </partitioning>
     <connection>ORACLE_CONNECTION</connection>
-    <schema>${USERNAME}</schema>
+    <schema>${SCHEMA}</schema>
     <table>STATE_PROVINCE</table>
     <commit>1000</commit>
     <truncate>N</truncate>
