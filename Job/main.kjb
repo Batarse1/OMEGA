@@ -498,8 +498,8 @@
       <attributes/>
       <server>smtp.gmail.com</server>
       <port>465</port>
-      <destination>00136020@uca.edu.sv,esramirez@uca.edu.sv</destination>
-      <destinationCc/>
+      <destination>esramirez@uca.edu.sv</destination>
+      <destinationCc>00136020@uca.edu.sv</destinationCc>
       <destinationBCc/>
       <replyto>00008119@uca.edu.sv</replyto>
       <replytoname>Tarea 1 BI - Grupo Omega</replytoname>
@@ -541,8 +541,8 @@
       <attributes/>
       <server>smtp.gmail.com</server>
       <port>465</port>
-      <destination>00136020@uca.edu.sv,esramirez@uca.edu.sv</destination>
-      <destinationCc/>
+      <destination>esramirez@uca.edu.sv</destination>
+      <destinationCc>00136020@uca.edu.sv</destinationCc>
       <destinationBCc/>
       <replyto>00008119@uca.edu.sv</replyto>
       <replytoname>Tarea 1 BI - Grupo Omega</replytoname>
