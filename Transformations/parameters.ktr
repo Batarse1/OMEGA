@@ -441,7 +441,7 @@
     <server>localhost</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>xe</database>
+    <database>orcl</database>
     <port>1521</port>
     <username>PARAMETROS</username>
     <password>Encrypted 2be98afc86aa78285b918a375ca80a0c9</password>
@@ -877,8 +877,8 @@ WHERE SISTEMA = 'OMEGA'</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>es_SV</date_format_locale>
-        <date_format_timezone>America/El_Salvador</date_format_timezone>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Guatemala</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
@@ -900,8 +900,8 @@ WHERE SISTEMA = 'OMEGA'</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>es_SV</date_format_locale>
-        <date_format_timezone>America/El_Salvador</date_format_timezone>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Guatemala</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
@@ -923,8 +923,8 @@ WHERE SISTEMA = 'OMEGA'</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>es_SV</date_format_locale>
-        <date_format_timezone>America/El_Salvador</date_format_timezone>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Guatemala</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
     </row-meta>
