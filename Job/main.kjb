@@ -304,8 +304,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>200</xloc>
-      <yloc>100</yloc>
+      <xloc>80</xloc>
+      <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -343,7 +343,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>400</xloc>
+      <xloc>272</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -358,21 +358,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>400</xloc>
-      <yloc>272</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Abort job</name>
-      <description/>
-      <type>ABORT</type>
-      <attributes/>
-      <message/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>400</xloc>
-      <yloc>384</yloc>
+      <xloc>272</xloc>
+      <yloc>240</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -383,7 +370,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>816</xloc>
+      <xloc>928</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -420,7 +407,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>592</xloc>
+      <xloc>464</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -435,21 +422,159 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>592</xloc>
-      <yloc>272</yloc>
+      <xloc>464</xloc>
+      <yloc>240</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Abort job 2</name>
+      <name>Abort main job </name>
       <description/>
       <type>ABORT</type>
       <attributes/>
-      <message/>
+      <message>Main job abortado</message>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>592</xloc>
-      <yloc>384</yloc>
+      <xloc>464</xloc>
+      <yloc>496</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Data warehouse</name>
+      <description/>
+      <type>JOB</type>
+      <attributes/>
+      <specification_method>filename</specification_method>
+      <job_object_id/>
+      <filename>${DIR_FILE}\Job\data_warehouse.kjb</filename>
+      <jobname/>
+      <directory/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <slave_server_name/>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <expand_remote_job>N</expand_remote_job>
+      <create_parent_folder>N</create_parent_folder>
+      <pass_export>N</pass_export>
+      <run_configuration>Pentaho local</run_configuration>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <set_append_logfile>N</set_append_logfile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>640</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>error 2</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <attributes/>
+      <logmessage>ERROR DURANTE FLUJO DE CARGA - DATA WAREHOUSE</logmessage>
+      <loglevel>Error</loglevel>
+      <logsubject>ERROR</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>640</xloc>
+      <yloc>240</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Mail</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <server>smtp.gmail.com</server>
+      <port>465</port>
+      <destination>00136020@uca.edu.sv</destination>
+      <destinationCc/>
+      <destinationBCc/>
+      <replyto>00008119@uca.edu.sv</replyto>
+      <replytoname>Tarea 1 BI</replytoname>
+      <subject>Ejecución correcta - Main job</subject>
+      <include_date>N</include_date>
+      <contact_person/>
+      <contact_phone/>
+      <comment/>
+      <include_files>N</include_files>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <use_auth>Y</use_auth>
+      <use_secure_auth>Y</use_secure_auth>
+      <auth_user>00008119@uca.edu.sv</auth_user>
+      <auth_password>Encrypted 2be98afc86aa7f2e48f41f828ffc28b88</auth_password>
+      <only_comment>N</only_comment>
+      <use_HTML>N</use_HTML>
+      <use_Priority>N</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>normal</priority>
+      <importance>normal</importance>
+      <sensitivity>normal</sensitivity>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses/>
+      <filetypes>      </filetypes>
+      <embeddedimages>
+      </embeddedimages>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>784</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Mail 2</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <server>smtp.gmail.com</server>
+      <port>465</port>
+      <destination>00136020@uca.edu.sv</destination>
+      <destinationCc/>
+      <destinationBCc/>
+      <replyto>00008119@uca.edu.sv</replyto>
+      <replytoname>Tarea 1 BI</replytoname>
+      <subject>Falla de ejecución Main job</subject>
+      <include_date>N</include_date>
+      <contact_person/>
+      <contact_phone/>
+      <comment/>
+      <include_files>N</include_files>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <use_auth>Y</use_auth>
+      <use_secure_auth>Y</use_secure_auth>
+      <auth_user>00008119@uca.edu.sv</auth_user>
+      <auth_password>Encrypted 2be98afc86aa7f2e48f41f828ffc28b88</auth_password>
+      <only_comment>N</only_comment>
+      <use_HTML>N</use_HTML>
+      <use_Priority>N</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>normal</priority>
+      <importance>normal</importance>
+      <sensitivity>normal</sensitivity>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses/>
+      <filetypes>      </filetypes>
+      <embeddedimages>
+      </embeddedimages>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>464</xloc>
+      <yloc>368</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -473,26 +598,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>parameters error</from>
-      <to>Abort job</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
       <from>parameters</from>
       <to>Replica</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Replica</from>
-      <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -509,8 +616,71 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
+      <from>Replica</from>
+      <to>Data warehouse</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Data warehouse</from>
+      <to>error 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Data warehouse</from>
+      <to>Mail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Mail</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>parameters error</from>
+      <to>Mail 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
       <from>error</from>
-      <to>Abort job 2</to>
+      <to>Mail 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>error 2</from>
+      <to>Mail 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Mail 2</from>
+      <to>Abort main job </to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
