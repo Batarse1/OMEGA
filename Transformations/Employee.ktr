@@ -791,7 +791,7 @@
       <schema_name/>
     </partitioning>
     <connection>ORACLE_CONNECTION</connection>
-    <schema>ODS</schema>
+    <schema>${SCHEMA}</schema>
     <table>EMPLOYEE</table>
     <commit>1000</commit>
     <truncate>Y</truncate>

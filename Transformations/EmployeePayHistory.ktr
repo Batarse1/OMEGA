@@ -436,14 +436,14 @@
   <notepads>
   </notepads>
   <connection>
-    <name>ORACLE_CONECCTION</name>
+    <name>local</name>
     <server>localhost</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>ORCLCDB</database>
+    <database>xe</database>
     <port>1521</port>
     <username>SYSTEM</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10dd9facd9</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -492,13 +492,13 @@
   </connection>
   <order>
     <hop>
-      <from>EMPLOYEE_PAYHISTORY</from>
+      <from>EMPLOYEE_PAY_HISTORY</from>
       <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>EMPLOYEE_PAYHISTORY</name>
+    <name>EMPLOYEE_PAY_HISTORY</name>
     <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -524,7 +524,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>${DIR_FILE}\\SOURCES\EmployeePayHistory.xlsx</name>
+      <name>${DIR_FILE}\SOURCES\EmployeePayHistory.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -627,8 +627,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>474</xloc>
-      <yloc>198</yloc>
+      <xloc>480</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -643,8 +643,8 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ORACLE_CONECCTION</connection>
-    <schema>ODS</schema>
+    <connection>local</connection>
+    <schema>${SCHEMA}</schema>
     <table>EMPLOYEE_PAY_HISTORY</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
@@ -691,8 +691,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
-      <yloc>192</yloc>
+      <xloc>704</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

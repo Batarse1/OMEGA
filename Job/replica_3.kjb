@@ -470,7 +470,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>656</xloc>
-      <yloc>352</yloc>
+      <yloc>368</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -513,13 +513,13 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>EmployeeDepartmentHistory</name>
+      <name>EmployeePayHistory</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${DIR_FILE}\Transformations\EmployeeDepartmentHistory.ktr</filename>
+      <filename>C:\OMEGA\Transformations\EmployeePayHistory.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -660,7 +660,7 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Employee Department History File</name>
+      <name>Employee Pay History File</name>
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
@@ -869,7 +869,7 @@
     </hop>
     <hop>
       <from>Dummy</from>
-      <to>EmployeeDepartmentHistory</to>
+      <to>EmployeePayHistory</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -904,7 +904,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>EmployeeDepartmentHistory</from>
+      <from>EmployeePayHistory</from>
       <to>Error2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -949,8 +949,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>EmployeeDepartmentHistory</from>
-      <to>Employee Department History File</to>
+      <from>EmployeePayHistory</from>
+      <to>Employee Pay History File</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
