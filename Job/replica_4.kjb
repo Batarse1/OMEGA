@@ -605,7 +605,7 @@
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\product_category_file.txt</filename>
+      <filename>${DIR_FILE}\productCategoryFile.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
@@ -620,7 +620,7 @@
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\product_subcategory_file.txt</filename>
+      <filename>${DIR_FILE}\productSubcategoryFile.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
@@ -635,7 +635,7 @@
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\state_province_file.txt</filename>
+      <filename>${DIR_FILE}\stateProvinceFile.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
@@ -650,7 +650,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\product_category_file.txt</filename>
+      <filename>${DIR_FILE}\productCategoryFile.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -668,7 +668,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\product_subcategory_file.txt</filename>
+      <filename>${DIR_FILE}\productSubcategoryFile.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -686,7 +686,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\state_province_file.txt</filename>
+      <filename>${DIR_FILE}\stateProvinceFile.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -709,7 +709,15 @@
       <fields>
         <field>
           <name>${DIR_FILE}</name>
-          <filemask>^.(product_category_file|product_subcategory_file|state_province_file).txt$</filemask>
+          <filemask>productCategoryFile.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}</name>
+          <filemask>productSubcategoryFile.txt</filemask>
+        </field>
+        <field>
+          <name>${DIR_FILE}</name>
+          <filemask>stateProvinceFile.txt</filemask>
         </field>
       </fields>
       <parallel>N</parallel>

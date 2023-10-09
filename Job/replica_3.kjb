@@ -649,7 +649,7 @@
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\Transformations\person_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\personFile.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
@@ -664,7 +664,7 @@
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\Transformations\employee_department_history_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\employeeDepartmentHistoryFile.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
@@ -679,7 +679,7 @@
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\Transformations\person_phone_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\personPhoneFile.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
@@ -694,7 +694,7 @@
       <description/>
       <type>CREATE_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\Transformations\product_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\productFile.txt</filename>
       <fail_if_file_exists>Y</fail_if_file_exists>
       <add_filename_result>N</add_filename_result>
       <parallel>N</parallel>
@@ -709,7 +709,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\Transformations\person_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\personFile.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -727,7 +727,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\Transformations\employee_deparment_history_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\employeeDepartmentHistoryFile.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -745,7 +745,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\Transformations\person_phone_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\personPhoneFile.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -763,7 +763,7 @@
       <description/>
       <type>WAIT_FOR_FILE</type>
       <attributes/>
-      <filename>${DIR_FILE}\Transformations\product_file.txt</filename>
+      <filename>${DIR_FILE}\Transformations\productFile.txt</filename>
       <maximum_timeout>3600</maximum_timeout>
       <check_cycle_time>2</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
@@ -786,19 +786,19 @@
       <fields>
         <field>
           <name>${DIR_FILE}\Transformations</name>
-          <filemask>product_file.txt</filemask>
+          <filemask>productFile.txt</filemask>
         </field>
         <field>
           <name>${DIR_FILE}\Transformations</name>
-          <filemask>person_file.txt</filemask>
+          <filemask>personFile.txt</filemask>
         </field>
         <field>
           <name>${DIR_FILE}\Transformations</name>
-          <filemask>employee_department_history_file.txt</filemask>
+          <filemask>employeeDepartmentHistoryFile.txt</filemask>
         </field>
         <field>
           <name>${DIR_FILE}\Transformations</name>
-          <filemask>person_phone_file.txt</filemask>
+          <filemask>personPhoneFile.txt</filemask>
         </field>
       </fields>
       <parallel>N</parallel>
