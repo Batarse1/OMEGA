@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2023/10/05 17:31:43.897</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/10/05 17:31:43.897</modified_date>
+  <modified_date>2023/10/09 10:14:06.678</modified_date>
   <parameters>
     </parameters>
   <slaveservers>
@@ -498,11 +498,11 @@
       <attributes/>
       <server>smtp.gmail.com</server>
       <port>465</port>
-      <destination>00136020@uca.edu.sv</destination>
+      <destination>00136020@uca.edu.sv,esramirez@uca.edu.sv</destination>
       <destinationCc/>
       <destinationBCc/>
       <replyto>00008119@uca.edu.sv</replyto>
-      <replytoname>Tarea 1 BI</replytoname>
+      <replytoname>Tarea 1 BI - Grupo Omega</replytoname>
       <subject>Ejecución correcta - Main job</subject>
       <include_date>N</include_date>
       <contact_person/>
@@ -541,11 +541,11 @@
       <attributes/>
       <server>smtp.gmail.com</server>
       <port>465</port>
-      <destination>00136020@uca.edu.sv</destination>
+      <destination>00136020@uca.edu.sv,esramirez@uca.edu.sv</destination>
       <destinationCc/>
       <destinationBCc/>
       <replyto>00008119@uca.edu.sv</replyto>
-      <replytoname>Tarea 1 BI</replytoname>
+      <replytoname>Tarea 1 BI - Grupo Omega</replytoname>
       <subject>Falla de ejecución Main job</subject>
       <include_date>N</include_date>
       <contact_person/>
