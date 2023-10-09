@@ -413,19 +413,19 @@
       <fields>
         <field>
           <name>EMPLOYEE</name>
-          <schemaname>ODS</schemaname>
+          <schemaname>${SCHEMA}</schemaname>
         </field>
         <field>
           <name>DEPARTMENT</name>
-          <schemaname>ODS</schemaname>
+          <schemaname>${SCHEMA}</schemaname>
         </field>
         <field>
           <name>EMPLOYEE_DEPARTMENT_HISTORY</name>
-          <schemaname>ODS</schemaname>
+          <schemaname>${SCHEMA}</schemaname>
         </field>
         <field>
           <name>EMAIL_ADDRESS</name>
-          <schemaname>ODS</schemaname>
+          <schemaname>${SCHEMA}</schemaname>
         </field>
       </fields>
       <parallel>N</parallel>

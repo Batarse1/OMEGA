@@ -373,15 +373,15 @@
       <fields>
         <field>
           <name>PRODUCT_CATEGORY</name>
-          <schemaname>ODS</schemaname>
+          <schemaname>${SCHEMA}</schemaname>
         </field>
         <field>
           <name>PRODUCT_SUBCATEGORY</name>
-          <schemaname>ODS</schemaname>
+          <schemaname>${SCHEMA}</schemaname>
         </field>
         <field>
           <name>STATE_PROVINCE</name>
-          <schemaname>ODS</schemaname>
+          <schemaname>${SCHEMA}</schemaname>
         </field>
       </fields>
       <parallel>N</parallel>
